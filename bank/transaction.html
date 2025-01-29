@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking System - Transactions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="#" onclick="goToDashboard()">Dashboard</a> | 
+            <a href="#" onclick="logout()">Logout</a> 
+        </nav>
+
+        <h2>Transaction Operations</h2>
+
+        <!-- Deposit Form -->
+        <div class="transaction-form">
+            <h3>Deposit</h3>
+            <input type="number" id="deposit-amount" placeholder="Enter Amount" required />
+            <button onclick="deposit()">Deposit</button>
+            <p id="deposit-feedback" style="color: green; display: none;"></p>
+        </div>
+
+        <!-- Withdraw Form -->
+        <div class="transaction-form">
+            <h3>Withdraw</h3>
+            <input type="number" id="withdraw-amount" placeholder="Enter Amount" required />
+            <button onclick="withdraw()">Withdraw</button>
+            <p id="withdraw-feedback" style="color: red; display: none;"></p>
+        </div>
+
+        <!-- Transfer Form -->
+        <div class="transaction-form">
+            <h3>Transfer</h3>
+            <input type="email" id="transfer-to-email" placeholder="Recipient Email" required />
+            <input type="number" id="transfer-amount" placeholder="Enter Amount" required />
+            <button onclick="transfer()">Transfer</button>
+            <p id="transfer-feedback" style="color: green; display: none;"></p>
+        </div>
+
+        <!-- Current Balance Display -->
+        <h4>Your Current Balance: $<span id='current-balance'>0.00</span></h4>
+
+        <!-- Canvas for Chart.js -->
+        <canvas id='transactionChart' width='400' height='200'></canvas>
+
+    </div>
+
+    <!-- JavaScript for Transaction Operations -->
+    <script src='script.js'></script> 
+</body>
+</html>

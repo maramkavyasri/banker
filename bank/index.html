@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking System - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Online Banking</h1>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#" onclick="showLogin()">Login</a> | 
+            <a href="#" onclick="showSignup()">Sign Up</a>
+        </nav>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Enter Email" required />
+            <input type="password" id="login-password" placeholder="Enter Password" required />
+            <button onclick="login()">Login</button>
+            <p id="login-feedback" style="color: red; display: none;"></p>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signup-form" class="form" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="email" id="signup-email" placeholder="Enter Email" required />
+            <input type="password" id="signup-password" placeholder="Enter Password" required />
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+            <input type="adharno" id="adhar" placeholder="enter a 12 digit adharno" required/>
+            <select id="account-type" required>
+                <option value="">Select Account Type</option>
+                <option value="personal-minor">Personal Account (Minor)</option>
+                <option value="personal-major">Personal Account (Major)</option>
+                <option value="business">Business Account</option>
+            </select>
+            <button onclick="signup()">Sign Up</button>
+            <p id="signup-feedback" style="color: red; display: none;"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Login and Signup -->
+    <script src="script.js"></script>
+</body>
+</html>

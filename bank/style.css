@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff; /* White background for the container */
+    padding: 20px;
+}
+
+nav {
+     text-align: center;
+}
+
+nav a {
+     text-decoration: none;
+     color: #007bff; /* Blue color for links */
+}
+
+nav a:hover {
+     text-decoration: underline;
+}
+
+h1, h2 {
+     text-align: center;
+     color: #333; /* Dark gray for headings */
+}
+
+.form {
+     margin-bottom: 20px; 
+}
+
+input[type=email],
+input[type=password],
+select,
+input[type=number] {
+     width: calc(100% - 20px);
+     padding: 10px;
+     margin-top: 5px; 
+     border: 1px solid #ccc; /* Light gray border */
+}
+
+button {
+     width: 100%;
+     padding: 10px; 
+     background-color: #28a745; /* Green for buttons */
+     color: white; 
+     border: none; /* Remove default border */
+}
+
+button:hover {
+     background-color: #218838; /* Darker green on hover */
+}
+
+#login-feedback,
+#signup-feedback,
+#deposit-feedback,
+#withdraw-feedback,
+#transfer-feedback {
+     font-size: 14px; 
+}
